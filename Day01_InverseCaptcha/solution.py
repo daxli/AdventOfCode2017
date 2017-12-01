@@ -14,7 +14,7 @@ def partTwo(data):
     step = length / 2
 
     sum = 0
-    for pos in xrange(0, length, step):
+    for pos in xrange(0, length):
         if(data[pos] == data[pos-step]):
                 sum = sum + int(data[pos])
 
@@ -27,8 +27,8 @@ def tester(function, scenarios):
             actual = function(case)
             assert actual == expected
         except AssertionError:
-            pattern = 'Actual: {0}\tExpected:{1}'
-            errorDetails = pattern.format(actual, expected)
+            pattern = 'Actual: {0}\tExpected:{1}\tCase: {2}'
+            errorDetails = pattern.format(actual, expected, case)
             errorMessage = '\n'.join([errorMessage, errorDetails])
     
     if errorMessage:
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         '1221': 0,
         '123425': 4,
         '123123': 12,
-        '12131415': 12
+        '12131415': 4
     }
     tester(partTwo, partTwoSecarios)
 
@@ -63,6 +63,6 @@ if __name__ == "__main__":
     with open('input.txt', 'r') as file:
         inputData = file.read()
     
-    print 'Day1 Inverse Captcha'
+    print 'Day01: Inverse Captcha'
     print '\tPart 1 solution: {0}'.format(partOne(inputData))
     print '\tPart 2 solution: {0}'.format(partTwo(inputData))
