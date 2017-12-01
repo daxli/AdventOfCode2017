@@ -63,6 +63,6 @@ if __name__ == "__main__":
     with open('input.txt', 'r') as file:
         inputData = file.read()
     
-    print 'Day01: Inverse Captcha'
+    print 'Day0cd1: Inverse Captcha'
     print '\tPart 1 solution: {0}'.format(partOne(inputData))
     print '\tPart 2 solution: {0}'.format(partTwo(inputData))
