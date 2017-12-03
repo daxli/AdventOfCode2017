@@ -10,15 +10,6 @@ class Point(object):
         dy = self.Y - other.Y
         return abs(dx) + abs(dy)
 
-def partOne(number):
-    size = int(math.ceil(math.sqrt(number)))
-    origo = calculateOrigo(size)
-
-    referenceX = (number % size) if (number % size) else size
-    reference = Point(referenceX, size)
-
-    return origo.manhattandDistance(reference)
-
 def calculateOrigo(size):
     if size == 1:
         return Point(1, 1)
@@ -30,6 +21,25 @@ def calculateOrigo(size):
 
         return Point(y + 1, y)
 
+#------------------------------------------------------------------------------#
+def partOne(number):
+    size = int(math.ceil(math.sqrt(number)))
+    origo = calculateOrigo(size)
+
+    referenceX = (number % size) if (number % size) else size
+    reference = Point(referenceX, size)
+
+    return origo.manhattandDistance(reference)
+
+#------------------------------------------------------------------------------#
+def partTwo(number):
+    size = int(math.ceil(math.sqrt(number)))
+    origo = calculateOrigo(size)
+
+    referenceX = (number % size) if (number % size) else size
+    reference = Point(referenceX, size)
+
+    return origo.manhattandDistance(reference)
 
 #------------------------------------------------------------------------------#
 def tester(function, scenarios):
