@@ -33,13 +33,8 @@ def partOne(number):
 
 #------------------------------------------------------------------------------#
 def partTwo(number):
-    size = int(math.ceil(math.sqrt(number)))
-    origo = calculateOrigo(size)
-
-    referenceX = (number % size) if (number % size) else size
-    reference = Point(referenceX, size)
-
-    return origo.manhattandDistance(reference)
+    pass
+    # https://oeis.org/A141481
 
 #------------------------------------------------------------------------------#
 def tester(function, scenarios):
