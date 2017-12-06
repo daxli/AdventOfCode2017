@@ -18,7 +18,6 @@ def calculateOrigo(size):
     if size % 2:
         return Point(y, y)
     else:
-
         return Point(y + 1, y)
 
 #------------------------------------------------------------------------------#
